@@ -11,11 +11,7 @@ class Window (Frame):
     def init_window(self):
         self.master.title("GUI")
         self.pack(fill=BOTH,expand=1)
-        '''
-        quitButton = Button(self, text="Quit", command=self.client_exit)
-        quitButton.place(x=0, y=0)
-
-        '''
+        
         menu = Menu(self.master)
         self.master.config(menu=menu)
 
@@ -34,7 +30,7 @@ class Window (Frame):
         exit()
 
     def showImg(self):
-        load = Image.open('main_pic.jpg')
+        load = Image.open('main_pic.jpg') #enter your image name
         render = ImageTk.PhotoImage(load)
         img = Label(self, image=render)
         img.image = render
